@@ -36,8 +36,9 @@ public:
 
 	bool exists(Type data);
 
+	void printList();
 	
-	
-
+	LinkedList();
 };
+
 
