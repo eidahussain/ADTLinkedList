@@ -28,3 +28,33 @@ void LinkedList<Type>::printList()
 	}
 
 }
+
+template<class Type>
+bool LinkedList<Type>::exists(Type data)
+{
+	// traverse until u find the data, or return false; 
+	/*nodeType<Type>* current = first;
+	while (current->info != data)
+	{
+		current = current->link;
+
+	}
+
+	if (current->info = data)
+		return true;
+	else
+
+	return false;*/
+
+	nodeType<Type>* current = first;
+	while (current != Null)
+	{
+		if (current->info == data)
+			return true;
+		current = current->link;
+
+	}
+
+	return false; 
+
+}
