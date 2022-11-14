@@ -19,5 +19,12 @@ template<class Type>
 void LinkedList<Type>::printList()
 {
 	// print all the nodes 
+	nodeType<Type>* current = first;
+	while (current != Null)
+	{
+		cout << current->info << endl;
+		current = current->link;
+
+	}
 
 }
