@@ -20,7 +20,7 @@ void LinkedList<Type>::printList()
 {
 	// print all the nodes 
 	nodeType<Type>* current = first;
-	while (current != Null)
+	while (current != NULL)
 	{
 		cout << current->info << endl;
 		current = current->link;
@@ -47,7 +47,7 @@ bool LinkedList<Type>::exists(Type data)
 	return false;*/
 
 	nodeType<Type>* current = first;
-	while (current != Null)
+	while (current != NULL)
 	{
 		if (current->info == data)
 			return true;
