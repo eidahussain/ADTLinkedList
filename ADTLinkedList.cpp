@@ -11,6 +11,8 @@ int main()
     std::cout << "Hello World!\n";
 
     LinkedList<int> ls1; 
+
+    cout << ls1.getCount();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

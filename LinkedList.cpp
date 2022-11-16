@@ -8,6 +8,26 @@ int LinkedList<Type>::getCount()
 }
 
 template<class Type>
+void LinkedList<Type>::insertAtStart(Type data)
+{
+  // 1. create the new node
+ 
+	nodeType <Type> newNode;
+	newNode.info = data;
+
+  // 2. make the new node point to first 
+
+	newNode.link = first;
+
+  // 3. make first point to the new node 
+	first = &newNode;
+
+  // 4. Increment the count  
+	count++;
+
+}
+
+template<class Type>
 LinkedList<Type>::LinkedList()
 {
 	count = 0;
