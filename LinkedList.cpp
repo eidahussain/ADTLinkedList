@@ -9,18 +9,34 @@ int LinkedList<Type>::getCount()
 
 template<class Type>
 bool LinkedList<Type>::insertAt(Type data, int index)
-{
+{   
+	//0. Validate the index 
+
+	if (index > count - 1)
+		return false;
+
 	//1. create the new node 
 
+	nodeType <Type> newNode;
+	newNode.info = data;
 
 	//2. navigate to the index 
-
+	int navIndex = 0;
+	nodeType<int>* current = first;
+	while (navIndex != index)
+	{
+		current = current->link;
+		navIndex++;
+	}
 
 	//3. Change the pointers 
-
+	newNode.link = current->link;
+	current->link = &newNode;
 
 	//4. increment the count 
-	
+	count++;
+
+	return true;
 }
 
 template<class Type>

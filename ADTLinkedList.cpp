@@ -11,7 +11,7 @@ int main()
     std::cout << "Hello World!\n";
 
     LinkedList<int> ls1; 
-    ls1.insertAtStart(3);
+   // ls1.insertAtStart(3);
     ls1.insertAtStart(7);
    // cout << ls1.getCount();
 
