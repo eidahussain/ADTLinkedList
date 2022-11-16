@@ -58,3 +58,6 @@ bool LinkedList<Type>::exists(Type data)
 	return false; 
 
 }
+
+template class LinkedList <int>;// fix for link problem 
+
