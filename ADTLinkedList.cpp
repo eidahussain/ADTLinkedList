@@ -11,8 +11,11 @@ int main()
     std::cout << "Hello World!\n";
 
     LinkedList<int> ls1; 
+    ls1.insertAtStart(3);
+    ls1.insertAtStart(7);
+   // cout << ls1.getCount();
 
-    cout << ls1.getCount();
+    ls1.printList();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

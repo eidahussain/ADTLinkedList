@@ -8,6 +8,22 @@ int LinkedList<Type>::getCount()
 }
 
 template<class Type>
+bool LinkedList<Type>::insertAt(Type data, int index)
+{
+	//1. create the new node 
+
+
+	//2. navigate to the index 
+
+
+	//3. Change the pointers 
+
+
+	//4. increment the count 
+	
+}
+
+template<class Type>
 void LinkedList<Type>::insertAtStart(Type data)
 {
   // 1. create the new node
