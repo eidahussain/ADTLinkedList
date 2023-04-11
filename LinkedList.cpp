@@ -12,13 +12,13 @@ bool LinkedList<Type>::insertAt(Type data, int index)
 {   
 	//0. Validate the index 
 
-	if (index > count - 1)
+	if (index > count - 1 || index < 0)
 		return false;
 
 	//1. create the new node 
 
-	nodeType <Type> newNode;
-	newNode.info = data;
+	nodeType <Type> *newNode = new nodeType <Type> ();
+	newNode->info = data;
 
 	//2. navigate to the index 
 	int navIndex = 0;
@@ -30,8 +30,8 @@ bool LinkedList<Type>::insertAt(Type data, int index)
 	}
 
 	//3. Change the pointers 
-	newNode.link = current->link;
-	current->link = &newNode;
+	newNode->link = current->link;
+	current->link = newNode;
 
 	//4. increment the count 
 	count++;
@@ -44,15 +44,15 @@ void LinkedList<Type>::insertAtStart(Type data)
 {
   // 1. create the new node
  
-	nodeType <Type> newNode;
-	newNode.info = data;
+	nodeType <Type> *newNode = new nodeType <Type>();
+	newNode->info = data;
 
   // 2. make the new node point to first 
 
-	newNode.link = first;
+	newNode->link = first;
 
   // 3. make first point to the new node 
-	first = &newNode;
+	first = newNode;
 
   // 4. Increment the count  
 	count++;
@@ -79,6 +79,21 @@ void LinkedList<Type>::printList()
 
 	}
 
+}
+
+template<class Type>
+int LinkedList<Type>::countData(Type data)
+{
+	int count = 0;
+	nodeType<Type>* current = first;
+	while (current != NULL)
+	{
+		if (current->info == data)
+			count++;
+		current = current->link;
+
+	}
+	return count;
 }
 
 template<class Type>

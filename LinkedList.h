@@ -41,6 +41,8 @@ public:
 	void printList();
 
 	int countData(Type data); 
+
+	void replaceData(Type originalData, Type newData); 
 	
 	LinkedList();
 };
